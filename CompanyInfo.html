@@ -77,10 +77,18 @@
               
               for (data in sheet){
               console.log(sheet[data]);
-    
-              let temp = "<td>"+sheet[data]+"</td>";
+              if (data === "img_src"){
+                const pic = sheet[data];
+                const logo = "<td><img src='" + pic + "'alt ='stored image' width='50' height='50'></td>";
+                str = str + logo;
+              }
+              else{
+                let temp = "<td>"+sheet[data]+"</td>";
                   
-              str = str+temp;
+                  str = str+temp;
+              }
+    
+              
               
             }
             
