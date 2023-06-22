@@ -79,7 +79,8 @@
               console.log(sheet[data]);
               if (data === "img_src"){
                 const pic = sheet[data];
-                const logo = "<td><img src='" + pic + "'alt ='stored image' width='50' height='50'></td>";
+                //const logo = "<td><img src='" + pic + "'alt ='stored image' width='50' height='50'></td>";
+                const logo = `<td><img src=${pic} alt ='stored image' width='50' height='50'></td>`;
                 str = str + logo;
               }
               else{
