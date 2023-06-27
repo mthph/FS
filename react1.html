@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Digital Clock</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
+<body>
+    <h1>Digital Clock</h1>
+    <h3>HTML Div with inner html</h3>
+    <div id="regulardiv" class="bg-primary">Should display time</div>
+    <h3> React Div below this</h3>
+    <div id="reactdiv" class="bg-secondary">Should display time as well</div>
+
+    <script>
+
+        let regulardiv = document.getElementById('regulardiv');
+        let reactDiv = ReactDOM.createRoot(document.getElementById('reactdiv'));
+
+        let render = () => {
+        
+        //console.log(regdiv);
+        regulardiv.innerHTML= `<input type='text'/><p> ${new Date()} </p>`
+        //using react
+        //create the element
+        //get the root
+        //render
+        //let dateElem = React.createElement('p',{},(new Date()).toString());
+        //div with input and date
+        let dateElem = React.createElement('div',{},[React.createElement('input',{},null),
+        React.createElement('p',{},(new Date()).toString())]);
+        
+        reactDiv.render(dateElem);
+        }
+        setInterval(render,1000); //parameters - function name and milliseconds
+    </script>
+</body>
+</html>
