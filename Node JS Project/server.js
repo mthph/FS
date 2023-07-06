@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const staticRoot = path.join(__dirname, 'public');
+const staticRoot = path.join(__dirname, 'Node JS Project');
 
 const server = http.createServer((req, res) => {
   const filePath = path.join(staticRoot, req.url);
