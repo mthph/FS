@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Check from './Check';
+//import Check from './Check';
 import Users from './Users';
 
 function App() {
